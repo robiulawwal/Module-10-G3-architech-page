@@ -68,12 +68,34 @@ a {
 }
 
 .banner-description,
-.features-description {
+.features-description,
+.sponsors-description {
     color: #727272;
     text-align: center start;
     font-size: 1rem;
     font-weight: 400;
     line-height: 160%;
+}
+
+.sponsors-description {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.spnsor-companies {
+    display: grid;
+    justify-items: center;
+    margin-top: 50px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.spnsor-companies img {
+    filter: grayscale(100%);
+}
+
+.sponsors-tittle {
+    text-align: center;
 }
 
 .banner-texts {
@@ -148,16 +170,98 @@ a {
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
 }
+
 .section-two {
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap: 20px; /* Optional: space between columns */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* Optional: space between columns */
 }
+
 .facts-image img {
     width: 100%;
 }
 
+.fact-card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    /* padding: 50px; */
+    width: 240px;
+    height: 240px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.fact-name {
+    font-size: 1.2rem;
+    color: var(--Dark-03, #727272);
+    font-weight: 600;
+    margin: 0;
+}
+
+.fact-number {
+    color: var(--Dark-02, #424242);
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.featured-architech img {
+    width: 100%;
+}
+
+.facts-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.section-five {
+    display: flex;
+    justify-content: space-around;
+    gap: 140px;
+}
+
+#experience-badge {
+    padding: 45px 42px;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#experience-year {
+    color: #FFF;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+#experience {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.footer {
+width: 80%;
+    margin: 100px auto;
+    border-radius: 8px;
+    background: #FFF4E7;
+
+}
+.footer-descrioption{
+    color: var(--Dark-02, #424242);
+text-align: center;
+font-size: 1.2rem;
+font-weight: 400;
+width: 80%;
+margin: 0 auto;
+padding: 30px;
+}
 /* responsive media query */
 @media screen and (max-width:576px) {
 
@@ -181,8 +285,10 @@ a {
         flex-direction: column;
     }
 
-    .team-images {
+    .team-images,
+    .spnsor-companies {
         grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
     }
 
     .team-images>img {
@@ -197,17 +303,73 @@ a {
     main>section {
         margin-top: 20px;
     }
+
+    .facts-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .section-two {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .section-five {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #experience-badge {
+        padding: 10px 20px;
+        margin-top: -50px;
+        margin-left: -30px;
+    }
+
+    #experience-year {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    #experience {
+        font-size: 1rem;
+    }
+    .footer{
+        width: 100%;
+        margin: 30px auto;
+    }
+    .footer-descrioption{
+        font-size: 0.8rem;
+        width: 100%;
+        padding: 0;
+        width: 90%;
+    }
 }
 
 /* mediam size device media */
 
 @media screen and (min-width:576px) and (max-width:992px) {
-    .section-one {
+
+    .section-one,
+    .section-five {
         flex-direction: column;
+    }
+
+    #experience-badge {
+        margin-left: -50px;
     }
 
     .team-images>img {
         width: 100%;
         margin: 0 auto;
+    }
+
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .spnsor-companies {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 }
